@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Perfil | EcoAngelim</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/perfil.css">
+</head>
+
+<body>
+
+  <div class="perfil-container">
+
+    <!-- TELA PRINCIPAL DO PERFIL -->
+    <div id="tela-perfil">
+
+      <header class="perfil-header">
+        <a href="index.html" class="perfil-voltar" aria-label="Voltar">←</a>
+        <h1>Perfil</h1>
+        <button class="perfil-config" id="abrir-config" type="button" aria-label="Abrir configurações">
+          ⚙️
+        </button>
+      </header>
+
+      <section class="perfil-identidade">
+        <div class="avatar">
+          <img src="img/avatar.png" alt="Foto de perfil" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <span class="avatar-placeholder">👤</span>
+        </div>
+        <h2 id="nome-usuario">Anya</h2>
+        <span class="nivel-usuario">🌱 Cidadã Verde</span>
+      </section>
+
+      <section class="estatisticas" aria-label="Estatísticas do perfil">
+        <div class="estatistica">
+          <span class="estatistica-icone">🌱</span>
+          <strong id="problemas">12</strong>
+          <span>Problemas<br>reportados</span>
+        </div>
+
+        <div class="estatistica">
+          <span class="estatistica-icone">🪙</span>
+          <strong id="ecocoins">--</strong>
+          <span>EcoCoins<br>acumulados</span>
+        </div>
+
+        <div class="estatistica">
+          <span class="estatistica-icone">🏆</span>
+          <strong id="conquistas">8</strong>
+          <span>Conquistas<br>desbloqueadas</span>
+        </div>
+      </section>
+
+      <section class="mimos">
+        <div class="secao-titulo">
+          <div>
+            <span class="eyebrow">COLEÇÃO</span>
+            <h2>Brindes</h2>
+          </div>
+          <span class="contador-mimos" id="contador-mimos">8/8</span>
+        </div>
+
+        <div class="prateleira" id="lista-mimos"></div>
+      </section>
+
+    </div>
+
+    <!-- TELA DE CONFIGURAÇÕES -->
+    <div id="tela-configuracoes" hidden>
+
+      <header class="config-header">
+        <button id="voltar-perfil" class="perfil-voltar" type="button" aria-label="Voltar para o perfil">
+          ←
+        </button>
+        <h1>Configurações</h1>
+        <div style="width: 40px;"></div>
+      </header>
+
+      <section class="config-lista">
+        <div class="config-grupo">
+          <div class="config-icone">👤</div>
+          <div class="config-conteudo">
+            <strong>Conta</strong>
+            <span>Editar informações do perfil</span>
+          </div>
+          <button class="config-arrow" id="btn-resetar-saldo" type="button">›</button>
+        </div>
+
+        <div class="config-grupo">
+          <div class="config-icone">🔔</div>
+          <div class="config-conteudo">
+            <strong>Notificações</strong>
+            <span>Alertas e novidades</span>
+          </div>
+          <label class="switch">
+            <input type="checkbox" checked>
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="config-grupo">
+          <div class="config-icone">🌱</div>
+          <div class="config-conteudo">
+            <strong>Lembretes ambientais</strong>
+            <span>Receber lembretes de participação</span>
+          </div>
+          <label class="switch">
+            <input type="checkbox" checked>
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="config-grupo">
+          <div class="config-icone">📍</div>
+          <div class="config-conteudo">
+            <strong>Localização</strong>
+            <span>Usar localização para o mapa</span>
+          </div>
+          <label class="switch">
+            <input type="checkbox" checked>
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="config-grupo">
+          <div class="config-icone">🎨</div>
+          <div class="config-conteudo">
+            <strong>Aparência</strong>
+            <span>Personalização visual</span>
+          </div>
+          <button class="config-arrow" type="button">›</button>
+        </div>
+
+        <div class="config-grupo">
+          <div class="config-icone">🔒</div>
+          <div class="config-conteudo">
+            <strong>Privacidade</strong>
+            <span>Controle dos seus dados</span>
+          </div>
+          <button class="config-arrow" type="button">›</button>
+        </div>
+
+        <div class="config-grupo">
+          <div class="config-icone">ℹ️</div>
+          <div class="config-conteudo">
+            <strong>Sobre o EcoAngelim</strong>
+            <span>Informações sobre a plataforma</span>
+          </div>
+          <button class="config-arrow" type="button">›</button>
+        </div>
+        
+<div class="config-grupo" id="btn-logout" style="cursor: pointer;">
+  <div class="config-icone">🚪</div>
+  <div class="config-conteudo">
+    <strong style="color: #e53935;">Sair da Conta</strong>
+    <span>Encerrar sessão neste dispositivo</span>
+  </div>
+  <button class="config-arrow" type="button" style="color: #e53935;">›</button>
+</div>
+
+      </section>
+
+    </div>
+
+  </div>
+
+  <script type="module" src="js/perfil.js"></script>
+
+</body>
+
+</html>
