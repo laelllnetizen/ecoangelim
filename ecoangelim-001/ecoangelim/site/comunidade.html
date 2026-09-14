@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Comunidade | EcoAngelim</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/comunidade.css">
+</head>
+
+<body>
+
+  <!-- ' HEADER ' -->
+  <header class="app-header">
+
+    <!-- ' LOGO ' -->
+    <a href="index.html" class="brand" aria-label="EcoAngelim">
+      <img src="img/logo.png" alt="EcoAngelim">
+    </a>
+
+    <!-- ' ECOCOINS ' -->
+    <div class="ecocoins" aria-label="Saldo de EcoCoins">
+      <span class="coin-icon">🪙</span>
+      <strong id="ecocoins">245</strong>
+    </div>
+
+    <!-- ' NOVIDADES ' -->
+    <a class="header-action" aria-label="Novidades">
+      <span>✉</span>
+      <i class="notification-dot"></i>
+    </a>
+
+  </header>
+
+  <!-- ' CONTEÚDO PRINCIPAL ' -->
+  <main class="pagina-comunidade">
+
+    <!-- ' CABEÇALHO DA PÁGINA ' -->
+    <section class="introducao-comunidade">
+      <span class="etiqueta-secao">COMUNIDADE</span>
+      <div class="titulo-comunidade">
+        <h1>A cidade fala por aqui</h1>
+        <span class="localidade">
+          <span class="ponto-localidade"></span>
+          Angelim
+        </span>
+      </div>
+    </section>
+
+    <!-- ' FILTROS ' -->
+    <section class="filtros-comunidade" aria-label="Filtrar ocorrências">
+      <button class="filtro ativo" type="button" data-filtro="todos">
+        🌐 Todos
+      </button>
+      <button class="filtro" type="button" data-filtro="minhas">
+        👤 Minhas
+      </button>
+      <button class="filtro" type="button" data-filtro="acoes">
+        🌱 Ações Verdes
+      </button>
+      <button class="filtro" type="button" data-filtro="denuncias">
+        ⚠️ Denúncias
+      </button>
+      <button class="filtro" type="button" data-filtro="ambiental">
+        🍃 Ambiental
+      </button>
+      <button class="filtro" type="button" data-filtro="sanitario">
+        💧 Sanitário
+      </button>
+      <button class="filtro" type="button" data-filtro="urbano">
+        🏘️ Urbano
+      </button>
+    </section>
+
+    <!-- ' FEED ' -->
+    <section class="feed" id="feed" aria-label="Publicações da comunidade">
+      <!-- ' Os posts serão inseridos aqui via JS ' -->
+    </section>
+
+  </main>
+
+  <!-- ' BOTTOM NAVIGATION ' -->
+  <nav class="bottom-nav" aria-label="Navegação principal">
+
+    <!-- ' HOME ' -->
+    <a href="index.html" class="nav-item">
+      <span class="nav-icon">⌂</span>
+      <span class="nav-label">Início</span>
+    </a>
+
+    <!-- ' FEIRA COM SUBMENU ' -->
+    <div class="nav-item-wrapper">
+      <a href="#" class="nav-item" id="btnFeira" aria-expanded="false">
+        <span class="nav-icon">🎟️</span>
+        <span class="nav-label">Feira</span>
+      </a>
+
+      <!-- ' SUBMENU FEIRA ' -->
+      <div class="feira-submenu" id="submenuFeira">
+        <a href="eventos.html" class="submenu-item">
+          <span class="submenu-icon">📅</span>
+          <span class="submenu-label">Eventos</span>
+        </a>
+        <a href="loja.html" class="submenu-item">
+          <span class="submenu-icon">🛒</span>
+          <span class="submenu-label">Loja</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- ' REPORTAR ' -->
+    <a href="reportar.html" class="report-button">
+      <span class="report-plus">+</span>
+      <span class="report-label">Reportar</span>
+    </a>
+
+    <!-- ' COMUNIDADE ' -->
+    <a href="comunidade.html" class="nav-item active">
+      <span class="nav-icon">♣</span>
+      <span class="nav-label">Comunidade</span>
+    </a>
+
+    <!-- ' PERFIL ' -->
+    <a href="perfil.html" class="nav-item">
+      <span class="nav-icon">♙</span>
+      <span class="nav-label">Perfil</span>
+    </a>
+
+  </nav>
+
+  <!-- ' SCRIPTS ' -->
+  <script src="js/app.js"></script>
+  <script src="js/dados.js"></script>
+  <script type="module" src="js/comunidade.js"></script>
+
+</body>
+
+</html>
