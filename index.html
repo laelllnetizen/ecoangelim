@@ -1,8 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
-<script>
-  window.location.href = "login.html";
+<script type="module">
+    import { auth } from "./js/firebase-config.js";
+    import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+
+    onAuthStateChanged(auth, (user) => {
+      if (!user) {
+        window.location.href = "login.html";
+      } else {
+        console.log("Usuário autenticado:", user.email);
+      }
+    });
 </script>
 
 <head>
@@ -138,18 +147,6 @@
   </div>
 
   <!-- ' SCRIPTS ' -->
-  <!--<script type="module">
-    import { auth } from "./js/firebase-config.js";
-    import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
-
-    onAuthStateChanged(auth, (user) => {
-      if (!user) {
-        window.location.href = "login.html";
-      } else {
-        console.log("Usuário autenticado:", user.email);
-      }
-    });
-  </script>-->
   
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script src="https://unpkg.com/leaflet.heat/dist/leaflet-heat.js"></script>
