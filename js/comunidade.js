@@ -340,3 +340,21 @@ function escaparHTML(valor) {
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#039;");
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const btnFeira = document.getElementById('btnFeira');
+  const submenuFeira = document.getElementById('submenuFeira');
+
+  if (btnFeira && submenuFeira) {
+    btnFeira.addEventListener('click', (e) => {
+      e.preventDefault();
+      submenuFeira.classList.toggle('ativo');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!btnFeira.contains(e.target) && !submenuFeira.contains(e.target)) {
+        submenuFeira.classList.remove('ativo');
+      }
+    });
+  }
+});
